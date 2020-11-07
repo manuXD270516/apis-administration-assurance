@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>activate_assurance.DataAccess</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201106210440_AddProductToDatabase.cs" />
+    <Compile Remove="Migrations\20201106210440_AddProductToDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20201106225126_AddOthersTablesOfDomain.cs" />
+    <Compile Remove="Migrations\20201106225126_AddOthersTablesOfDomain.Designer.cs" />
+    <Compile Remove="Migrations\20201107024305_ModifyFieldsAuditDatetime.cs" />
+    <Compile Remove="Migrations\20201107024305_ModifyFieldsAuditDatetime.Designer.cs" />
+    <Compile Remove="Migrations\20201107024633_ModifyFieldsAuditDatetimeAllTables.cs" />
+    <Compile Remove="Migrations\20201107024633_ModifyFieldsAuditDatetimeAllTables.Designer.cs" />
+    <Compile Remove="Migrations\20201107053431_InitializeListsForRelationsToMany.cs" />
+    <Compile Remove="Migrations\20201107053431_InitializeListsForRelationsToMany.Designer.cs" />
+    <Compile Remove="Migrations\20201107054415_InitializeListsForRelationsToMany2.cs" />
+    <Compile Remove="Migrations\20201107054415_InitializeListsForRelationsToMany2.Designer.cs" />
+    <Compile Remove="Migrations\20201107055301_InitializeListsForRelationsToManyThree.cs" />
+    <Compile Remove="Migrations\20201107055301_InitializeListsForRelationsToManyThree.Designer.cs" />
+    <Compile Remove="Migrations\20201107055459_InitializeListsForRelationsToManyFor.cs" />
+    <Compile Remove="Migrations\20201107055459_InitializeListsForRelationsToManyFor.Designer.cs" />
+    <Compile Remove="Migrations\20201107055736_InitializeListsForRelationsToMany3.cs" />
+    <Compile Remove="Migrations\20201107055736_InitializeListsForRelationsToMany3.Designer.cs" />
+    <Compile Remove="Migrations\20201107065553_InitializeModelsAssurence.cs" />
+    <Compile Remove="Migrations\20201107065553_InitializeModelsAssurence.Designer.cs" />
+    <Compile Remove="Migrations\20201107071651_Initialize.cs" />
+    <Compile Remove="Migrations\20201107071651_Initialize.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\activate-assurance.Models\activate-assurance.Models.csproj" />
+    <ProjectReference Include="..\activate-assurance.Utils\activate-assurance.Utils.csproj" />
+  </ItemGroup>
+
+</Project>

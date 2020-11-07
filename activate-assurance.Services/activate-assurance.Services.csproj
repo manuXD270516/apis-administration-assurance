@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>activate_assurance.Services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\activate-assurance.DataAccess\activate-assurance.DataAccess.csproj" />
+    <ProjectReference Include="..\activate-assurance.Models\activate-assurance.Models.csproj" />
+    <ProjectReference Include="..\activate-assurance.Utils\activate-assurance.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
