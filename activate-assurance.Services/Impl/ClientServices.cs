@@ -27,7 +27,7 @@ namespace activate_assurance.Services.Impl
 
         public async Task<List<Client>> findAllAsync()
         {
-            return await clientRepository.getAllAsync();
+            return await clientRepository.getAllAsync(includeProperties: "activateAssurances");
         }
 
         public Client findById(int id)

@@ -28,10 +28,25 @@
     <Compile Remove="Migrations\20201107065553_InitializeModelsAssurence.Designer.cs" />
     <Compile Remove="Migrations\20201107071651_Initialize.cs" />
     <Compile Remove="Migrations\20201107071651_Initialize.Designer.cs" />
+    <Compile Remove="Migrations\20201107081355_Initialize.cs" />
+    <Compile Remove="Migrations\20201107081355_Initialize.Designer.cs" />
+    <Compile Remove="Migrations\20201107192436_Initialize.cs" />
+    <Compile Remove="Migrations\20201107192436_Initialize.Designer.cs" />
+    <Compile Remove="Migrations\20201107193708_Initialize.cs" />
+    <Compile Remove="Migrations\20201107193708_Initialize.Designer.cs" />
+    <Compile Remove="Migrations\20201107215622_InitializeModels.cs" />
+    <Compile Remove="Migrations\20201107215622_InitializeModels.Designer.cs" />
+    <Compile Remove="Migrations\20201107215658_InitializeModels.cs" />
+    <Compile Remove="Migrations\20201107215658_InitializeModels.Designer.cs" />
+    <Compile Remove="Migrations\20201107220159_InitializeModels.cs" />
+    <Compile Remove="Migrations\20201107220159_InitializeModels.Designer.cs" />
+    <Compile Remove="Migrations\20201107220232_InitializeModels.cs" />
+    <Compile Remove="Migrations\20201107220232_InitializeModels.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
   </ItemGroup>
 

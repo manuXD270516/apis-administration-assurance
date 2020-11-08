@@ -29,7 +29,7 @@ namespace activate_assurance.Models
         public string lastnames { get; set; }
 
         [InverseProperty(property: "client")]
-        public virtual List<Assurance> activateAssurances { get; set; }
+        public List<Assurance> activateAssurances { get; set; }
 
 
 

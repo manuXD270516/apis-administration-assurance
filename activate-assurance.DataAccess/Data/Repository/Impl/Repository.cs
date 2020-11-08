@@ -40,22 +40,21 @@ namespace activate_assurance.DataAccess.Data.Repository.Impl
             return dbSet.Find(id);
         }
 
-        public IEnumerable<T> getAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
+        public IEnumerable<T> getAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, params string[] includeProperties)
         {
             IQueryable<T> query = dbSet;
+
+            // include properties will be comma separated
+            includeProperties.ToList()
+                .ForEach(prop => query = query.Include(prop));
+
             // aplicate filter
             if (!isNull(filter))
             {
                 query = query.Where(filter);
             }
-            // include properties will be comma separated
-            if (!isNull(includeProperties))
-            {
-                includeProperties.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                    .ToList()
-                    .ForEach(propCurrent => query = query.Include(propCurrent.ToLower()));
-            }
-
+           
+           
             // aplicate order by
             if (!isNull(orderBy))
             {
@@ -64,21 +63,20 @@ namespace activate_assurance.DataAccess.Data.Repository.Impl
             return query.ToList();
         }
 
-        public async Task<List<T>> getAllAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
+        public async Task<List<T>> getAllAsync(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, params string[] includeProperties)
         {
             IQueryable<T> query = dbSet;
+
+            // include properties will be comma separated
+            includeProperties.ToList()
+                .ForEach(prop => query = query.Include(prop));
+
             // aplicate filter
             if (!isNull(filter))
             {
                 query = query.Where(filter);
             }
-            // include properties will be comma separated
-            if (!isNull(includeProperties))
-            {
-                includeProperties.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                    .ToList()
-                    .ForEach(propCurrent => query = query.Include(propCurrent.ToLower()));
-            }
+            
 
             // aplicate order by
             if (!isNull(orderBy))
@@ -93,41 +91,43 @@ namespace activate_assurance.DataAccess.Data.Repository.Impl
             return await dbSet.FindAsync(id);
         }
 
-        public T getFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
+        public T getFirstOrDefault(Expression<Func<T, bool>> filter = null, params string[] includeProperties)
         {
             IQueryable<T> query = dbSet;
+
+            // include properties will be comma separated
+            // observation: include properties : ToLower()
+            // include properties will be comma separated
+            includeProperties.ToList()
+                .ForEach(prop => query = query.Include(prop));
+
+
             // aplicate filter
             if (!isNull(filter))
             {
                 query = query.Where(filter);
             }
-            // include properties will be comma separated
-            // observation: include properties : ToLower()
-            if (!isNull(includeProperties))
-            {
-                includeProperties.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                    .ToList()
-                    .ForEach(propCurrent => query = query.Include(propCurrent.ToLower()));
-            }
+            
             return query.FirstOrDefault();
         }
 
-        public async Task<T> getFirstOrDefaultAsync(Expression<Func<T, bool>> filter = null, string includeProperties = null)
+        public async Task<T> getFirstOrDefaultAsync(Expression<Func<T, bool>> filter = null, params string[] includeProperties)
         {
             IQueryable<T> query = dbSet;
+
+            // include properties will be comma separated
+            // observation: include properties : ToLower()
+            // include properties will be comma separated
+            includeProperties.ToList()
+                .ForEach(prop => query = query.Include(prop));
+
             // aplicate filter
             if (!isNull(filter))
             {
                 query = query.Where(filter);
             }
-            // include properties will be comma separated
-            // observation: include properties : ToLower()
-            if (!isNull(includeProperties))
-            {
-                includeProperties.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                    .ToList()
-                    .ForEach(propCurrent => query = query.Include(propCurrent.ToLower()));
-            }
+            
+
             return await query.FirstOrDefaultAsync();
         }
 

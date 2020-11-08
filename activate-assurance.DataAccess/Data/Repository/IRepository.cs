@@ -14,12 +14,12 @@ namespace activate_assurance.DataAccess.Data.Repository
         IEnumerable<T> getAll(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-            string includeProperties = null
+            params string[] includeProperties
             );
 
         T getFirstOrDefault(
             Expression<Func<T, bool>> filter = null,
-            string includeProperties = null
+            params string[] includeProperties
             );
 
         void add(T entity);
@@ -36,12 +36,12 @@ namespace activate_assurance.DataAccess.Data.Repository
         Task<List<T>> getAllAsync(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-            string includeProperties = null
+            params string[] includeProperties
             );
 
         Task<T> getFirstOrDefaultAsync(
             Expression<Func<T, bool>> filter = null,
-            string includeProperties = null
+            params string[] includeProperties
             );
 
         Task<T> addAsync(T entity);

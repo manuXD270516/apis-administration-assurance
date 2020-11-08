@@ -28,15 +28,19 @@ namespace activate_assurance.Models
 
         [Column(Order = 3)]
         [Required(AllowEmptyStrings = false)]
+        [StringLength(maximumLength: 100)]
+        public string name { get; set; } // producto
+
+        [Column(Order = 4)]
         [StringLength(maximumLength: 50)]
         public string mark { get; set; } // Codigo de barras
 
-        [Column(Order = 4)]
+        [Column(Order = 5)]
         [Required]
         public int expirationDays { get; set; }
 
         [InverseProperty(property: "product")]
-        public virtual List<Assurance> activateAssurances { get; set; }
+        public List<Assurance> activateAssurances { get; set; }
 
 
         public Product()

@@ -227,16 +227,10 @@ namespace activate_assurance.DataAccess.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
-                    b.Property<DateTime>("claimDate")
+                    b.Property<DateTime?>("claimDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("clientId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("commerceActivateId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("commerceClaimId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("createdAt")
@@ -255,15 +249,21 @@ namespace activate_assurance.DataAccess.Migrations
                         .HasColumnType("nvarchar(300)")
                         .HasMaxLength(300);
 
+                    b.Property<int?>("usersCommerceActivateId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("usersCommerceClaimId")
+                        .HasColumnType("int");
+
                     b.HasKey("assuranceId");
 
                     b.HasIndex("clientId");
 
-                    b.HasIndex("commerceActivateId");
-
-                    b.HasIndex("commerceClaimId");
-
                     b.HasIndex("productId");
+
+                    b.HasIndex("usersCommerceActivateId");
+
+                    b.HasIndex("usersCommerceClaimId");
 
                     b.ToTable("Assurances");
                 });
@@ -352,9 +352,13 @@ namespace activate_assurance.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("mark")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<string>("serialCode")
                         .IsRequired()
@@ -368,7 +372,7 @@ namespace activate_assurance.DataAccess.Migrations
 
             modelBuilder.Entity("activate_assurance.Models.UsersCommerce", b =>
                 {
-                    b.Property<int>("userCommerceId")
+                    b.Property<int>("usersCommerceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -392,7 +396,7 @@ namespace activate_assurance.DataAccess.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.HasKey("userCommerceId");
+                    b.HasKey("usersCommerceId");
 
                     b.HasIndex("commerceId")
                         .IsUnique();
@@ -459,21 +463,21 @@ namespace activate_assurance.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("activate_assurance.Models.Commerce", "commerceActivate")
-                        .WithMany("activateAssurances")
-                        .HasForeignKey("commerceActivateId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("activate_assurance.Models.Commerce", "commerceClaim")
-                        .WithMany("claimAssurances")
-                        .HasForeignKey("commerceClaimId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
                     b.HasOne("activate_assurance.Models.Product", "product")
                         .WithMany("activateAssurances")
                         .HasForeignKey("productId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("activate_assurance.Models.UsersCommerce", "usersCommerceActivate")
+                        .WithMany("activateAssurances")
+                        .HasForeignKey("usersCommerceActivateId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("activate_assurance.Models.UsersCommerce", "usersCommerceClaim")
+                        .WithMany("claimAssurances")
+                        .HasForeignKey("usersCommerceClaimId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("activate_assurance.Models.UsersCommerce", b =>

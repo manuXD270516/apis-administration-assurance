@@ -24,9 +24,9 @@ namespace activate_assurance.Models
         public Client client { get; set; }
 
         [Column(Order = 3)]
-        public int? commerceActivateId { get; set; }
-        [ForeignKey(name: "commerceActivateId")]
-        public Commerce commerceActivate { get; set; }
+        public int? usersCommerceActivateId { get; set; }
+        [ForeignKey(name: "usersCommerceActivateId")]
+        public UsersCommerce usersCommerceActivate { get; set; }
 
         [Column(Order = 4)]
         [Required]
@@ -39,16 +39,16 @@ namespace activate_assurance.Models
 
 
         [Column(Order = 6)]
-        public int? commerceClaimId { get; set; }
-        [ForeignKey(name: "commerceClaimId")]
-        public virtual Commerce commerceClaim { get; set; }
+        public int? usersCommerceClaimId { get; set; }
+        [ForeignKey(name: "usersCommerceClaimId")]
+        public UsersCommerce usersCommerceClaim { get; set; }
 
         [Column(Order = 7)]
         [StringLength(maximumLength: 300)]
-        public string reason { get; set; }
+        public string? reason { get; set; }
 
         [Column(Order = 8)]
-        public DateTime claimDate { get; set; }
+        public DateTime? claimDate { get; set; }
 
 
         // ExpirationDate pending

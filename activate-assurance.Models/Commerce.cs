@@ -22,14 +22,7 @@ namespace activate_assurance.Models
         [StringLength(maximumLength: 200)]
         public string address { get; set; }
 
-        [InverseProperty(property: "commerceActivate")]
-        public virtual List<Assurance> activateAssurances { get; set; }
-
-        [InverseProperty(property: "commerceClaim")]
-        public virtual List<Assurance> claimAssurances { get; set; }
-
-
-
+       
 
         // Type pending
         [InverseProperty(property: "commerce")]
@@ -38,7 +31,7 @@ namespace activate_assurance.Models
 
         public Commerce()
         {
-            activateAssurances = new List<Assurance>();
+            
         }
 
     }

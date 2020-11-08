@@ -43,15 +43,15 @@ namespace activate_assurance.DataAccess
                 .HasDefaultValueSql("GETDATE()");
 
             builder.Entity<Assurance>()
-                 .HasOne(e => e.commerceActivate)
+                 .HasOne(e => e.usersCommerceActivate)
                  .WithMany(x => x.activateAssurances)
-                 .HasForeignKey(e => e.commerceActivateId)
+                 .HasForeignKey(e => e.usersCommerceActivateId)
                  .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Assurance>()
-                 .HasOne(e => e.commerceClaim)
+                 .HasOne(e => e.usersCommerceClaim)
                  .WithMany(x => x.claimAssurances)
-                 .HasForeignKey(e => e.commerceClaimId)
+                 .HasForeignKey(e => e.usersCommerceClaimId)
                  .OnDelete(DeleteBehavior.Restrict);
 
 

@@ -36,6 +36,8 @@ namespace backend_activate_assurance
             options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IProductRepository, ProductRepository>();
@@ -43,15 +45,15 @@ namespace backend_activate_assurance
             services.AddScoped<IAssuranceRepository, AssuranceRepository>();
             services.AddScoped<ICommerceRepository, CommerceRepository>();
             services.AddScoped<IUsersCommerceRepository, UsersCommerceRepository>();
-            
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //services.AddScoped(typeof(IServicesTemplate<>), typeof(Produ<>));
             services.AddScoped<IProductServices, ProductServices>();
             services.AddScoped<IClientServices, ClientServices>();
-            //services.AddScoped<IActivateAssuranceRepository, ActivateAssuranceRepository>();
-            //services.AddScoped<ICommerceRepository, CommerceRepository>();
-            //services.AddScoped<IUsersCommerceRepository, UsersCommerceRepository>();
+            services.AddScoped<ICommerceServices, CommerceServices>();
+            services.AddScoped<IUsersCommerceServices, UsersCommerceServices>();
+            services.AddScoped<IAssuranceServices, AssuranceServices>();
             //services.AddScoped<IClaimAssuranceRepository, ClaimAssuranceRepository>();
 
 

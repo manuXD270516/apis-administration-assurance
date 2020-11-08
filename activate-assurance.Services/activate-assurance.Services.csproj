@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\activate-assurance.DataAccess\activate-assurance.DataAccess.csproj" />
     <ProjectReference Include="..\activate-assurance.Models\activate-assurance.Models.csproj" />
     <ProjectReference Include="..\activate-assurance.Utils\activate-assurance.Utils.csproj" />

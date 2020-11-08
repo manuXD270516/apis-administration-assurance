@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace activate_assurance.DataAccess.Migrations
 {
-    public partial class Initialize : Migration
+    public partial class InitializeModels : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -56,7 +56,7 @@ namespace activate_assurance.DataAccess.Migrations
                     names = table.Column<string>(maxLength: 50, nullable: false),
                     lastnames = table.Column<string>(maxLength: 50, nullable: false),
                     createdAt = table.Column<DateTime>(nullable: false),
-                    lastUpdated = table.Column<DateTime>(nullable: false)
+                    lastUpdated = table.Column<DateTime>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -72,7 +72,7 @@ namespace activate_assurance.DataAccess.Migrations
                     name = table.Column<string>(maxLength: 100, nullable: false),
                     address = table.Column<string>(maxLength: 200, nullable: true),
                     createdAt = table.Column<DateTime>(nullable: false),
-                    lastUpdated = table.Column<DateTime>(nullable: false)
+                    lastUpdated = table.Column<DateTime>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -87,10 +87,11 @@ namespace activate_assurance.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     serialCode = table.Column<string>(maxLength: 100, nullable: false),
                     codeArticle = table.Column<string>(maxLength: 20, nullable: false),
-                    mark = table.Column<string>(maxLength: 50, nullable: false),
+                    name = table.Column<string>(maxLength: 100, nullable: false),
+                    mark = table.Column<string>(maxLength: 50, nullable: true),
                     expirationDays = table.Column<int>(nullable: false, defaultValue: 0),
                     createdAt = table.Column<DateTime>(nullable: false),
-                    lastUpdated = table.Column<DateTime>(nullable: false)
+                    lastUpdated = table.Column<DateTime>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -207,17 +208,17 @@ namespace activate_assurance.DataAccess.Migrations
                 name: "UsersCommerces",
                 columns: table => new
                 {
-                    userCommerceId = table.Column<int>(nullable: false)
+                    usersCommerceId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     username = table.Column<string>(maxLength: 30, nullable: false),
                     password = table.Column<string>(maxLength: 30, nullable: false),
                     commerceId = table.Column<int>(nullable: false),
                     createdAt = table.Column<DateTime>(nullable: false),
-                    lastUpdated = table.Column<DateTime>(nullable: false)
+                    lastUpdated = table.Column<DateTime>(nullable: false),
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UsersCommerces", x => x.userCommerceId);
+                    table.PrimaryKey("PK_UsersCommerces", x => x.usersCommerceId);
                     table.ForeignKey(
                         name: "FK_UsersCommerces_Commerces_commerceId",
                         column: x => x.commerceId,
@@ -234,14 +235,14 @@ namespace activate_assurance.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     productId = table.Column<int>(nullable: false),
                     clientId = table.Column<int>(nullable: false),
-                    commerceActivateId = table.Column<int>(nullable: true),
+                    usersCommerceActivateId = table.Column<int>(nullable: true),
                     activationDate = table.Column<DateTime>(nullable: false, defaultValueSql: "GETDATE()"),
                     expirationDays = table.Column<int>(nullable: false),
-                    commerceClaimId = table.Column<int>(nullable: true),
+                    usersCommerceClaimId = table.Column<int>(nullable: true),
                     reason = table.Column<string>(maxLength: 300, nullable: true),
-                    claimDate = table.Column<DateTime>(nullable: false),
+                    claimDate = table.Column<DateTime>(nullable: true),
                     createdAt = table.Column<DateTime>(nullable: false),
-                    lastUpdated = table.Column<DateTime>(nullable: false)
+                    lastUpdated = table.Column<DateTime>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -253,23 +254,23 @@ namespace activate_assurance.DataAccess.Migrations
                         principalColumn: "clientId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Assurances_Commerces_commerceActivateId",
-                        column: x => x.commerceActivateId,
-                        principalTable: "Commerces",
-                        principalColumn: "commerceId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Assurances_Commerces_commerceClaimId",
-                        column: x => x.commerceClaimId,
-                        principalTable: "Commerces",
-                        principalColumn: "commerceId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Assurances_Products_productId",
                         column: x => x.productId,
                         principalTable: "Products",
                         principalColumn: "productId",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Assurances_UsersCommerces_usersCommerceActivateId",
+                        column: x => x.usersCommerceActivateId,
+                        principalTable: "UsersCommerces",
+                        principalColumn: "usersCommerceId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Assurances_UsersCommerces_usersCommerceClaimId",
+                        column: x => x.usersCommerceClaimId,
+                        principalTable: "UsersCommerces",
+                        principalColumn: "usersCommerceId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -317,19 +318,19 @@ namespace activate_assurance.DataAccess.Migrations
                 column: "clientId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Assurances_commerceActivateId",
-                table: "Assurances",
-                column: "commerceActivateId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Assurances_commerceClaimId",
-                table: "Assurances",
-                column: "commerceClaimId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Assurances_productId",
                 table: "Assurances",
                 column: "productId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Assurances_usersCommerceActivateId",
+                table: "Assurances",
+                column: "usersCommerceActivateId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Assurances_usersCommerceClaimId",
+                table: "Assurances",
+                column: "usersCommerceClaimId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UsersCommerces_commerceId",
@@ -359,9 +360,6 @@ namespace activate_assurance.DataAccess.Migrations
                 name: "Assurances");
 
             migrationBuilder.DropTable(
-                name: "UsersCommerces");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
@@ -372,6 +370,9 @@ namespace activate_assurance.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "UsersCommerces");
 
             migrationBuilder.DropTable(
                 name: "Commerces");

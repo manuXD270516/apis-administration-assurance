@@ -29,7 +29,7 @@ namespace activate_assurance.Services.Impl
 
         public async Task<List<Product>> findAllAsync()
         {
-            return await productRepository.getAllAsync();
+            return await productRepository.getAllAsync(includeProperties: "activateAssurances");
         }
 
         public Product findById(int id)

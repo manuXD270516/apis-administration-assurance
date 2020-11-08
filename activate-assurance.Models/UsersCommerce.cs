@@ -10,7 +10,7 @@ namespace activate_assurance.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int userCommerceId { get; set; }
+        public int usersCommerceId { get; set; }
 
         [Column(Order = 1)]
         [Required(AllowEmptyStrings = false)]
@@ -24,10 +24,24 @@ namespace activate_assurance.Models
 
         [Column(Order = 3)]
         public int commerceId { get; set; }
+        
         [ForeignKey(name: "commerceId")]
         public Commerce commerce { get; set; }
 
 
+        [InverseProperty(property: "usersCommerceActivate")]
+        public List<Assurance> activateAssurances { get; set; }
+
+        [InverseProperty(property: "usersCommerceClaim")]
+        public List<Assurance> claimAssurances { get; set; }
+
+
+
+        public UsersCommerce()
+        {
+            activateAssurances = new List<Assurance>();
+            claimAssurances = new List<Assurance>();
+        }
 
 
     }
