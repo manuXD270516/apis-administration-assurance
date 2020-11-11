@@ -4,8 +4,10 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using activate_assurance.Models;
+using activate_assurance.Models.DTOs;
 using activate_assurance.Services;
 using backend_activate_assurance.Interfaces;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_activate_assurance.Controllers
@@ -32,6 +34,13 @@ namespace backend_activate_assurance.Controllers
         public async Task<ActionResult<List<UsersCommerce>>> findAllUsersCommerces()
         {
             return await usersCommerceServices.findAllAsync();
+        }
+
+        [HttpGet]
+        [Route(IUsersCommerceEndpoint.GET_PROFILE)]
+        public async Task<ActionResult<ProfileUserCommerceDTO>> findProfileUsersCommerce(int usersCommerceId)
+        {
+            return await usersCommerceServices.findProfileUsersCommerce(usersCommerceId);
         }
 
         [HttpGet]

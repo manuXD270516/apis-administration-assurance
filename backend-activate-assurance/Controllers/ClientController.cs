@@ -35,6 +35,13 @@ namespace backend_activate_assurance.Controllers
         }
 
         [HttpGet]
+        [Route(IClientEndpoint.SEARCH_CLIENT)]
+        public async Task<ActionResult<Client>> findClientByDni(string clientDni)
+        {
+            return await clientServices.findClientByDni(clientDni);
+        }
+
+        [HttpGet]
         [Route(IClientEndpoint.CLIENT_PARAM_ID)]
         public async Task<ActionResult<Client>> findClientById(int clientId)
         {

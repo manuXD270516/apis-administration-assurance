@@ -13,9 +13,11 @@ namespace activate_assurance.Services.Impl
     public class UsersCommerceServices : IUsersCommerceServices
     {
         private readonly IUsersCommerceRepository usersCommerceRepository;
-        public UsersCommerceServices(IUsersCommerceRepository commerceRepository)
+        private readonly IAssuranceRepository assuranceRepository;
+        public UsersCommerceServices(IUsersCommerceRepository commerceRepository, IAssuranceRepository assuranceRepository)
         {
             this.usersCommerceRepository = commerceRepository;
+            this.assuranceRepository = assuranceRepository;
         }
 
         public async Task<UsersCommerce> addAsync(UsersCommerce entity)
@@ -47,6 +49,19 @@ namespace activate_assurance.Services.Impl
         public async Task<UsersCommerce> findByIdAsync(int id)
         {
             return await usersCommerceRepository.getByIdAsync(id);
+        }
+
+        public async Task<ActionResult<ProfileUserCommerceDTO>> findProfileUsersCommerce(int usersCommerceId)
+        {
+            string[] relations = { "commerce" };
+            ProfileUserCommerceDTO profileUser =  (ProfileUserCommerceDTO) await usersCommerceRepository.getFirstOrDefaultAsync(includeProperties: relations,
+                                                                            filter: user => user.usersCommerceId == usersCommerceId
+                                                                            );
+
+            profileUser.countAssurancesActivated = await assuranceRepository.countAsync(ass => ass.usersCommerceActivateId == usersCommerceId && ass.usersCommerceClaimId== null);
+            profileUser.countAssurancesClaim = await assuranceRepository.countAsync(ass => ass.usersCommerceClaimId == usersCommerceId);
+            profileUser.countClientsRegister = new Random().Next(0, 5); // modificar el valor obtenido
+            return profileUser;
         }
 
         public async Task<UsersCommerce> updateAsync(int id, UsersCommerce entity)

@@ -35,6 +35,16 @@ namespace activate_assurance.DataAccess.Data.Repository.Impl
             return entityCreated.Entity;
         }
 
+        public async Task<int> countAsync(Expression<Func<T, bool>> filter = null)
+        {
+            IQueryable<T> query = dbSet;
+            if (!isNull(filter))
+            {
+                query = query.Where(filter);
+            }
+            return await query.CountAsync();
+        }
+
         public T get(int id)
         {
             return dbSet.Find(id);

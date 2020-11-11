@@ -44,6 +44,8 @@ namespace activate_assurance.DataAccess.Data.Repository
             params string[] includeProperties
             );
 
+        Task<int> countAsync(Expression<Func<T, bool>> filter = null);
+
         Task<T> addAsync(T entity);
         Task<T> updateAsync(int id, T entity);
         Task<T> removeAsync(T entity);

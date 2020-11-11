@@ -35,6 +35,13 @@ namespace backend_activate_assurance.Controllers
         }
 
         [HttpGet]
+        [Route(IProductEndpoint.SEARCH_PRODUCT)]
+        public async Task<ActionResult<Product>> findProductByCodeOrSerial(string productCode = "", string productSerial = "")
+        {
+            return await productServices.findProductByCodeOrSerial(productCode, productSerial);
+        }
+
+        [HttpGet]
         [Route(IProductEndpoint.PRODUCT_PARAM_ID)]
         public async Task<ActionResult<Product>> findProductById(int productId)
         {

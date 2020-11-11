@@ -1,5 +1,6 @@
 ﻿using activate_assurance.DataAccess.Data.Repository;
 using activate_assurance.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,13 @@ namespace activate_assurance.Services.Impl
         public async Task<Product> findByIdAsync(int id)
         {
             return await productRepository.getByIdAsync(id);
+        }
+
+        public async Task<ActionResult<Product>> findProductByCodeOrSerial(string productCode, string productSerial)
+        {
+            return await productRepository.getFirstOrDefaultAsync(product =>
+                                            product.codeArticle.Equals(productCode) || product.serialCode.Equals(productSerial)
+                                            );
         }
 
         public async Task<Product> updateAsync(int id, Product entity)

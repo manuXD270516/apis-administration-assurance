@@ -11,5 +11,6 @@ namespace activate_assurance.Services
     public interface IUsersCommerceServices : IServicesTemplate<UsersCommerce>
     {
         Task<ActionResult<AuthenticationDTO>> authenticate(UserLoginDTO userLogin);
+        Task<ActionResult<ProfileUserCommerceDTO>> findProfileUsersCommerce(int usersCommerceId);
     }
 }

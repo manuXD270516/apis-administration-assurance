@@ -1,5 +1,6 @@
 ﻿using activate_assurance.DataAccess.Data.Repository;
 using activate_assurance.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,6 +39,11 @@ namespace activate_assurance.Services.Impl
         public async Task<Client> findByIdAsync(int id)
         {
             return await clientRepository.getByIdAsync(id);
+        }
+
+        public async Task<ActionResult<Client>> findClientByDni(string clientDni)
+        {
+            return await clientRepository.getFirstOrDefaultAsync(client => client.dni.Equals(clientDni));
         }
 
         public async Task<Client> updateAsync(int id, Client entity)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using activate_assurance.Models;
+using activate_assurance.Models.DTOs;
 using activate_assurance.Services;
 using backend_activate_assurance.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,31 @@ namespace backend_activate_assurance.Controllers
             return await assuranceServices.addAsync(assurance);
         }
 
+        [HttpPost]
+        [Route(IAssuranceEndpoint.CLAIM_ASSURANCE)]
+        public async Task<ActionResult<Assurance>> claimAssurance(ClaimAssuranceDTO claimAssurance)
+        {
+            return await assuranceServices.claimAssurance(claimAssurance);
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<Assurance>>> findAllAssurances()
         {
             return await assuranceServices.findAllAsync();
+        }
+
+        [HttpGet]
+        [Route(IAssuranceEndpoint.SEARCH_BY_CLIENT)]
+        public async Task<ActionResult<List<AssuranceDTO>>> findAllAssurancesByClientId(int clientId)
+        {
+            return await assuranceServices.findAllAssurancesByClientId(clientId);
+        }
+
+        [HttpGet]
+        [Route(IAssuranceEndpoint.GET_ALL_ASSURANCES)]
+        public async Task<ActionResult<List<AssuranceDTO>>> findAllAssurancesCustom()
+        {
+            return await assuranceServices.findAllAssurancesCustom();
         }
 
         [HttpGet]
