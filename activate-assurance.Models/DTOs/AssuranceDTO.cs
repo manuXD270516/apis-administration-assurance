@@ -16,6 +16,9 @@ namespace activate_assurance.Models.DTOs
         public string productName { get; set; }
         public string assuranceState { get; set; }
         public string assuranceDateState { get; set; }
+        public int expirationDays { get; set; }
+
+
 
         public static explicit operator AssuranceDTO(Assurance assuranceModel)
         {
@@ -32,13 +35,14 @@ namespace activate_assurance.Models.DTOs
                 {
                     assuranceDto.productCode = assuranceModel.product.codeArticle;
                     assuranceDto.productName = assuranceModel.product.name;
+                    assuranceDto.expirationDays = assuranceModel.product.expirationDays;
                 }
                 if (isNull(assuranceModel.usersCommerceClaimId))
                 {
-
                     assuranceDto.assuranceState = "GARANTIA ACTIVADA";
                     assuranceDto.assuranceDateState = assuranceModel.activationDate.ToString("dd/MM/yyyy hh:mm");
-                } else
+                }
+                else
                 {
                     assuranceDto.assuranceState = "GARANTIA EJECTUDA";
                     assuranceDto.assuranceDateState = assuranceModel.claimDate?.ToString("dd/MM/yyyy hh:mm");

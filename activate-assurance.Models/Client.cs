@@ -28,6 +28,10 @@ namespace activate_assurance.Models
         [StringLength(maximumLength: 50)]
         public string lastnames { get; set; }
 
+        [Column(Order =4)]
+        [StringLength(maximumLength: 10)]
+        public string mobilePhone { get; set; }
+
         [InverseProperty(property: "client")]
         public List<Assurance> activateAssurances { get; set; }
 
