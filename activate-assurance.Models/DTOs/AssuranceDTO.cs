@@ -40,12 +40,12 @@ namespace activate_assurance.Models.DTOs
                 if (isNull(assuranceModel.usersCommerceClaimId))
                 {
                     assuranceDto.assuranceState = "GARANTIA ACTIVADA";
-                    assuranceDto.assuranceDateState = assuranceModel.activationDate.ToString("dd/MM/yyyy hh:mm");
+                    assuranceDto.assuranceDateState = assuranceModel.activationDate.ToString("dd-MM-yyyy hh:mm");
                 }
                 else
                 {
                     assuranceDto.assuranceState = "GARANTIA EJECTUDA";
-                    assuranceDto.assuranceDateState = assuranceModel.claimDate?.ToString("dd/MM/yyyy hh:mm");
+                    assuranceDto.assuranceDateState = assuranceModel.claimDate?.ToString("dd-MM-yyyy hh:mm");
                 }
             }
             return assuranceDto;
