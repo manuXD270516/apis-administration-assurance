@@ -16,7 +16,7 @@ namespace activate_assurance.DataAccess
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
+                
         }
 
 

@@ -11,24 +11,26 @@ namespace activate_assurance.Models
     public class Product : BaseEntity
     {
 
+        // modified constraints
+        
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int productId { get; set; }
 
         [Column(Order = 1)]
-        [Required(AllowEmptyStrings = false)]
-        [StringLength(maximumLength: 100, MinimumLength = 5)]
+        [Required(AllowEmptyStrings = true)]
+        [StringLength(maximumLength: 100)]
         public string serialCode { get; set; } // Codigo de barras
 
         [Column(Order = 2)]
 
         [Required(AllowEmptyStrings = false)]
-        [StringLength(maximumLength: 20)]
-        public string codeArticle { get; set; } // Codigo de barras
+        [StringLength(maximumLength: 30)]
+        public string codeArticle { get; set; } // Codigo de articulo
 
         [Column(Order = 3)]
         [Required(AllowEmptyStrings = false)]
-        [StringLength(maximumLength: 100)]
+        [StringLength(maximumLength: 200)]
         public string name { get; set; } // producto
 
         [Column(Order = 4)]

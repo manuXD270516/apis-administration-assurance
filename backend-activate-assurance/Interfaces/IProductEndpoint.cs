@@ -15,12 +15,17 @@ namespace backend_activate_assurance.Interfaces
         public const string SEARCH_PRODUCT = "search" + "/"; //+ PRODUCT_PARAM_CODE;
         public const string PRODUCT_PARAM_ID = "{productId}";
         public const string PRODUCT_PARAM_CODE = "{productCode}";
+        public const string MASSIVE_REGISTERS = "massive";
 
         Task<ActionResult<List<Product>>> findAllProducts();
         Task<ActionResult<Product>> findProductById(int productId);
         Task<ActionResult<Product>> findProductByCodeOrSerial(string productCode, string productSerial);
+        
         Task<ActionResult<Product>> addProduct(Product product);
+        Task<ActionResult<List<Product>>> addProducts(List<Product> products);
+        
         Task<ActionResult<Product>> updateProduct(int productId, Product product);
+
         //ActionResult<P>
 
     }

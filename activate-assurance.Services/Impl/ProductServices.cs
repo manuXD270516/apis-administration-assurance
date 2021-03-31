@@ -23,6 +23,12 @@ namespace activate_assurance.Services.Impl
             return await productRepository.addAsync(entity);
         }
 
+
+        public async Task<List<Product>> addMassiveAsync(List<Product> entities)
+        {
+            return await productRepository.addMassiveAsync(entities);
+        }
+
         public List<Product> findAll()
         {
             throw new NotImplementedException();

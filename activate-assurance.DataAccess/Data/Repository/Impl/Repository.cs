@@ -35,6 +35,15 @@ namespace activate_assurance.DataAccess.Data.Repository.Impl
             return entityCreated.Entity;
         }
 
+        public async Task<List<T>> addMassiveAsync(List<T> entities)
+        {
+            await dbSet.AddRangeAsync(entities);
+            await context.SaveChangesAsync();
+            return entities;
+        }
+
+        
+
         public async Task<int> countAsync(Expression<Func<T, bool>> filter = null)
         {
             IQueryable<T> query = dbSet;

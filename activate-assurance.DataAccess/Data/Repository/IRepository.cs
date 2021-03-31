@@ -47,6 +47,7 @@ namespace activate_assurance.DataAccess.Data.Repository
         Task<int> countAsync(Expression<Func<T, bool>> filter = null);
 
         Task<T> addAsync(T entity);
+        Task<List<T>> addMassiveAsync(List<T> entities);
         Task<T> updateAsync(int id, T entity);
         Task<T> removeAsync(T entity);
 

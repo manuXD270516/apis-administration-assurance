@@ -46,6 +46,10 @@ namespace activate_assurance.Services.Impl
             throw new NotImplementedException();
         }
 
+        public Task<List<UsersCommerce>> addMassiveAsync(List<UsersCommerce> entities){ 
+            throw new NotImplementedException();
+        }
+
         public async Task<UsersCommerce> findByIdAsync(int id)
         {
             return await usersCommerceRepository.getByIdAsync(id);

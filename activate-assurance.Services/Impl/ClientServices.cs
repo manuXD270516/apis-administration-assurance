@@ -36,6 +36,10 @@ namespace activate_assurance.Services.Impl
             throw new NotImplementedException();
         }
 
+        public Task<List<Client>> addMassiveAsync(List<Client> entities){ 
+            throw new NotImplementedException();
+        }
+
         public async Task<Client> findByIdAsync(int id)
         {
             return await clientRepository.getByIdAsync(id);

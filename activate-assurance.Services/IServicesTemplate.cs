@@ -14,6 +14,7 @@ namespace activate_assurance.Services.Impl
         Task<List<T>> findAllAsync();
         Task<T> findByIdAsync(int id);
         Task<T> addAsync(T entity);
+        Task<List<T>> addMassiveAsync(List<T> entities);
         Task<T> updateAsync(int id, T entity);
     }
 }
