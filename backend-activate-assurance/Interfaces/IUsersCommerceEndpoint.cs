@@ -15,6 +15,7 @@ namespace backend_activate_assurance.Interfaces
         public const string USERSCOMMERCE_ENDPOINT_BASE = ENDPOINT_BASE + "/" + RESOURCE;
         public const string USERSCOMMERCE_PARAM_ID = "{usersCommerceId}";
         public const string GET_PROFILE = "profile"+"/"+ USERSCOMMERCE_PARAM_ID;
+        public const string MASSIVE_REGISTERS = "massive";
 
         Task<ActionResult<List<UsersCommerce>>> findAllUsersCommerces();
         Task<ActionResult<UsersCommerce>> findUsersCommerceById(int usersCommerceId);

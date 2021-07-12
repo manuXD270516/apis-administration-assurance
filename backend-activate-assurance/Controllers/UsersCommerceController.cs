@@ -30,6 +30,13 @@ namespace backend_activate_assurance.Controllers
             return await usersCommerceServices.addAsync(usersCommerce);
         }
 
+        [HttpPost]
+        [Route(IUsersCommerceEndpoint.MASSIVE_REGISTERS)]
+        public async Task<ActionResult<List<UsersCommerce>>> addProducts(List<UsersCommerce> usersCommerces)
+        {
+            return await usersCommerceServices.addMassiveAsync(usersCommerces);
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<UsersCommerce>>> findAllUsersCommerces()
         {

@@ -1,36 +1,43 @@
 {
   "format": 1,
   "restore": {
-    "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/backend-activate-assurance/backend-activate-assurance.csproj": {}
+    "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\backend-activate-assurance\\backend-activate-assurance.csproj": {}
   },
   "projects": {
-    "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/activate-assurance.DataAccess.csproj": {
+    "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\activate-assurance.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/activate-assurance.DataAccess.csproj",
+        "projectUniqueName": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\activate-assurance.DataAccess.csproj",
         "projectName": "activate-assurance.DataAccess",
-        "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/activate-assurance.DataAccess.csproj",
-        "packagesPath": "/home/scfg-mjsaavedra/.nuget/packages/",
-        "outputPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/obj/",
+        "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\activate-assurance.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/scfg-mjsaavedra/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj"
               },
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj"
               }
             }
           }
@@ -68,49 +75,49 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/116/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj": {
+    "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj",
+        "projectUniqueName": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj",
         "projectName": "activate-assurance.Models",
-        "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj",
-        "packagesPath": "/home/scfg-mjsaavedra/.nuget/packages/",
-        "outputPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/obj/",
+        "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/scfg-mjsaavedra/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj"
               }
             }
           }
@@ -140,55 +147,55 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/116/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Services/activate-assurance.Services.csproj": {
+    "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Services\\activate-assurance.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Services/activate-assurance.Services.csproj",
+        "projectUniqueName": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Services\\activate-assurance.Services.csproj",
         "projectName": "activate-assurance.Services",
-        "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Services/activate-assurance.Services.csproj",
-        "packagesPath": "/home/scfg-mjsaavedra/.nuget/packages/",
-        "outputPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Services/obj/",
+        "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Services\\activate-assurance.Services.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/scfg-mjsaavedra/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/activate-assurance.DataAccess.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/activate-assurance.DataAccess.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\activate-assurance.DataAccess.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\activate-assurance.DataAccess.csproj"
               },
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj"
               },
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj"
               }
             }
           }
@@ -218,41 +225,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/116/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj": {
+    "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj",
+        "projectUniqueName": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj",
         "projectName": "activate-assurance.Utils",
-        "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj",
-        "packagesPath": "/home/scfg-mjsaavedra/.nuget/packages/",
-        "outputPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/obj/",
+        "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/scfg-mjsaavedra/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -286,58 +293,58 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/116/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/backend-activate-assurance/backend-activate-assurance.csproj": {
+    "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\backend-activate-assurance\\backend-activate-assurance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/backend-activate-assurance/backend-activate-assurance.csproj",
+        "projectUniqueName": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\backend-activate-assurance\\backend-activate-assurance.csproj",
         "projectName": "backend-activate-assurance",
-        "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/backend-activate-assurance/backend-activate-assurance.csproj",
-        "packagesPath": "/home/scfg-mjsaavedra/.nuget/packages/",
-        "outputPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/backend-activate-assurance/obj/",
+        "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\backend-activate-assurance\\backend-activate-assurance.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\backend-activate-assurance\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/scfg-mjsaavedra/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp5.0"
+          "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/activate-assurance.DataAccess.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.DataAccess/activate-assurance.DataAccess.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\activate-assurance.DataAccess.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.DataAccess\\activate-assurance.DataAccess.csproj"
               },
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Models/activate-assurance.Models.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Models\\activate-assurance.Models.csproj"
               },
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Services/activate-assurance.Services.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Services/activate-assurance.Services.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Services\\activate-assurance.Services.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Services\\activate-assurance.Services.csproj"
               },
-              "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj": {
-                "projectPath": "/home/scfg-mjsaavedra/projects-personal-manuel/nannys-software/apis-administration-assurance/activate-assurance.Utils/activate-assurance.Utils.csproj"
+              "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj": {
+                "projectPath": "D:\\Proyectos Extras\\activacion-garantias\\implementacion\\administration-activate-assurance\\activate-assurance.Utils\\activate-assurance.Utils.csproj"
               }
             }
           }
@@ -405,7 +412,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/116/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }
